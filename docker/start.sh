@@ -1,9 +1,8 @@
 #!/bin/sh
 
-LISTEN_PORT=${PORT:-80}
+LISTEN_PORT=${PORT:-8080}
 
 echo "==> Starting on port: $LISTEN_PORT"
-echo "==> MYSQLHOST from shell: $MYSQLHOST"
 
 cat > /etc/nginx/nginx.conf << NGINXCONF
 worker_processes 1;
@@ -24,11 +23,6 @@ http {
             fastcgi_pass 127.0.0.1:9000;
             fastcgi_index index.php;
             fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
-            fastcgi_param MYSQLHOST "$MYSQLHOST";
-            fastcgi_param MYSQLPORT "$MYSQLPORT";
-            fastcgi_param MYSQLDATABASE "$MYSQLDATABASE";
-            fastcgi_param MYSQLUSER "$MYSQLUSER";
-            fastcgi_param MYSQLPASSWORD "$MYSQLPASSWORD";
             include fastcgi_params;
         }
     }
