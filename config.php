@@ -5,7 +5,7 @@
  */
 
 // Veritabanı bağlantı bilgileri
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql.railway.internal');
 define('DB_NAME', 'railway');
 define('DB_USER', 'root');
 define('DB_PASS', 'qTVHsjDrZHeqDDctlKVVeGFXrTVbdatw');
