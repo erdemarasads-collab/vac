@@ -1,2 +1,5 @@
 [phases.setup]
-nixPkgs = ["php83", "php83Extensions.pdo", "php83Extensions.pdo_mysql", "php83Extensions.mysqli", "php83Extensions.mbstring"]
+nixPkgs = ["php", "phpExtensions.pdo", "phpExtensions.pdo_mysql", "phpExtensions.mysqli", "phpExtensions.mbstring"]
+
+[variables]
+PHP_VERSION = "8.2"
