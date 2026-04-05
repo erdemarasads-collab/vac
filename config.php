@@ -4,16 +4,11 @@
  * Tüm veritabanı bağlantı bilgileri burada
  */
 
-// Railway environment variables - $_ENV, $_SERVER veya getenv() ile al
-function env($key) {
-    return $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key) ?: null;
-}
-
-define('DB_HOST', env('MYSQLHOST'));
-define('DB_PORT', env('MYSQLPORT') ?: '3306');
-define('DB_NAME', env('MYSQLDATABASE'));
-define('DB_USER', env('MYSQLUSER'));
-define('DB_PASS', env('MYSQLPASSWORD'));
+define('DB_HOST', 'hopper.proxy.rlwy.net');
+define('DB_PORT', '37372');
+define('DB_NAME', 'railway');
+define('DB_USER', 'root');
+define('DB_PASS', 'qTVHsjDrZHeqDDctlKVVeGFXrTVbdatw');
 define('DB_CHARSET', 'utf8mb4');
 
 /**
