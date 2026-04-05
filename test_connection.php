@@ -1,7 +1,7 @@
 <?php
 // Veritabanı bağlantısını test et
 
-$host = 'localhost';
+$host = 'mysql.railway.internal';
 $dbname = 'railway';
 $username = 'root';
 $password = 'qTVHsjDrZHeqDDctlKVVeGFXrTVbdatw';

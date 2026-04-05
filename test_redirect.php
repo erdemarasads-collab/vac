@@ -7,7 +7,7 @@ if (!isset($_SESSION['userIdentifier'])) {
 }
 
 // Veritabanı bağlantısı
-$host = 'localhost';
+$host = 'mysql.railway.internal';
 $dbname = 'railway';
 $username = 'root';
 $password = 'qTVHsjDrZHeqDDctlKVVeGFXrTVbdatw';
