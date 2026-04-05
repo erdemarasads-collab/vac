@@ -1,31 +1,50 @@
 <?php
 /**
- * Veritabanı Konfigürasyon Dosyası
- * Tüm veritabanı bağlantı bilgileri burada
+ * Railway uyumlu veritabanı bağlantı dosyası
  */
 
-// Veritabanı bağlantı bilgileri
-define('DB_HOST', 'mysql.railway.internal');
-define('DB_NAME', 'railway');
-define('DB_USER', 'root');
-define('DB_PASS', 'qTVHsjDrZHeqDDctlKVVeGFXrTVbdatw');
-define('DB_CHARSET', 'utf8mb4');
-
-/**
- * Veritabanı bağlantısı oluştur
- * @return PDO
- */
 function getDbConnection() {
     try {
-        $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=" . DB_CHARSET;
-        $pdo = new PDO($dsn, DB_USER, DB_PASS);
+
+        // Önce MYSQL_URL dene (Railway standardı)
+        $url = getenv('MYSQL_URL') ?: $_SERVER['MYSQL_URL'] ?? null;
+
+        if ($url) {
+            $parts = parse_url($url);
+
+            $host = $parts['host'] ?? null;
+            $port = $parts['port'] ?? 3306;
+            $user = $parts['user'] ?? null;
+            $pass = $parts['pass'] ?? null;
+            $db   = isset($parts['path']) ? ltrim($parts['path'], '/') : null;
+
+        } else {
+            // fallback (tek tek env)
+            $host = getenv('MYSQLHOST') ?: $_SERVER['MYSQLHOST'] ?? null;
+            $port = getenv('MYSQLPORT') ?: $_SERVER['MYSQLPORT'] ?? 3306;
+            $user = getenv('MYSQLUSER') ?: $_SERVER['MYSQLUSER'] ?? null;
+            $pass = getenv('MYSQLPASSWORD') ?: $_SERVER['MYSQLPASSWORD'] ?? null;
+            $db   = getenv('MYSQLDATABASE') ?: $_SERVER['MYSQLDATABASE'] ?? null;
+        }
+
+        // Hala yoksa hata ver
+        if (!$host || !$user || !$db) {
+            throw new Exception("Database environment variables bulunamadı");
+        }
+
+        // PDO bağlantısı
+        $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
+
+        $pdo = new PDO($dsn, $user, $pass);
+
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
         return $pdo;
-    } catch(PDOException $e) {
-        // Güvenlik için detaylı hata mesajı gösterme
-        error_log("Database connection error: " . $e->getMessage());
-        die(json_encode(['success' => false, 'message' => 'Veritabanı bağlantı hatası']));
+
+    } catch (Exception $e) {
+        error_log("DB ERROR: " . $e->getMessage());
+        die("❌ Veritabanı bağlantı hatası");
     }
 }
 
