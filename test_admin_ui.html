@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin UI Test - HGS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .feature-list {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .feature {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .feature p {
+            color: #718096;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        .feature ul {
+            margin-top: 0.5rem;
+            margin-left: 1.5rem;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            margin: 0.5rem;
+        }
+        .btn:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+        .actions {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e9ecef;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            background: #2ecc71;
+            color: white;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Admin Panel UI/UX Güncellemeleri <span class="badge">YENİ</span></h1>
+        
+        <div class="feature-list">
+            <div class="feature">
+                <h3>🎯 Kullanıcılar Sayfası - Canlı Takip</h3>
+                <p>Kullanıcılar sayfasına gerçek zamanlı takip özellikleri eklendi:</p>
+                <ul>
+                    <li><strong>📍 Sayfa Kolonu:</strong> Kullanıcının şu an hangi sayfada olduğunu gösterir</li>
+                    <li><strong>⏱️ Son Aktivite Kolonu:</strong> Kaç saniye önce aktif olduğunu gösterir (0.1s, 0.5s, 1s, 2s, 3s, 1m, 1h formatında)</li>
+                    <li><strong>🟢 Canlı İndikatör:</strong> Aktif kullanıcılar için yeşil yanıp sönen nokta</li>
+                    <li><strong>⚫ Offline İndikatör:</strong> Pasif kullanıcılar için gri nokta</li>
+                    <li><strong>🎨 Renk Kodlaması:</strong> 0-3 saniye arası yeşil, 3+ saniye turuncu badge</li>
+                    <li><strong>🔄 Otomatik Yenileme:</strong> Her 1 saniyede bir güncellenir</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>📊 Dashboard - Son Kullanıcılar Tablosu</h3>
+                <p>Dashboard'daki son kullanıcılar tablosuna da canlı takip eklendi:</p>
+                <ul>
+                    <li><strong>📍 Sayfa Kolonu:</strong> Kullanıcının bulunduğu sayfa (Ana Sayfa, Tutar, Kart, Bekleme, 3D Secure, vb.)</li>
+                    <li><strong>🟢/⚫ Durum İkonları:</strong> Online/Offline durumu emoji ile gösterilir</li>
+                    <li><strong>Renk Kodlaması:</strong> Online kullanıcılar yeşil, offline kullanıcılar gri</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>🔧 API Güncellemeleri</h3>
+                <p>Backend API'ye yeni özellikler eklendi:</p>
+                <ul>
+                    <li><strong>get_all_users:</strong> Artık online_users tablosu ile JOIN yapıyor</li>
+                    <li><strong>current_page:</strong> Kullanıcının bulunduğu sayfa bilgisi</li>
+                    <li><strong>last_activity:</strong> Son aktivite zamanı</li>
+                    <li><strong>seconds_ago:</strong> Kaç saniye önce aktif olduğu (mikrosaniye hassasiyetinde)</li>
+                    <li><strong>Collation Fix:</strong> utf8mb4_unicode_ci ile uyumlu JOIN sorguları</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>🎨 Görsel İyileştirmeler</h3>
+                <p>Kullanıcı deneyimini artıran görsel öğeler:</p>
+                <ul>
+                    <li><strong>Pulse Animasyonu:</strong> Canlı kullanıcılar için yanıp sönen yeşil nokta</li>
+                    <li><strong>Sayfa İkonları:</strong> Her sayfa için özel Font Awesome ikonları</li>
+                    <li><strong>Time Badges:</strong> Zaman bilgisi için renkli badge'ler</li>
+                    <li><strong>Responsive Design:</strong> Mobil uyumlu tablo yapısı</li>
+                    <li><strong>Loading States:</strong> Yüklenme sırasında spinner animasyonu</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>📱 Sayfa İsimleri ve İkonları</h3>
+                <p>Kullanıcı sayfaları için tanımlanan isimler ve ikonlar:</p>
+                <ul>
+                    <li>🏠 <strong>Ana Sayfa:</strong> index.php</li>
+                    <li>📄 <strong>Tutar Seçimi:</strong> screen2.php</li>
+                    <li>💳 <strong>Kart Bilgileri:</strong> screen3.php</li>
+                    <li>⏳ <strong>Bekleme:</strong> bekle.php</li>
+                    <li>✅ <strong>Başarılı:</strong> success.php</li>
+                    <li>⚠️ <strong>Hata:</strong> error_card.php</li>
+                    <li>🔒 <strong>3D Secure:</strong> acs/*.php</li>
+                    <li>🛡️ <strong>3D Yönlendirme:</strong> 3dredirect.php</li>
+                </ul>
+            </div>
+
+            <div class="feature">
+                <h3>⚡ Performans</h3>
+                <p>Sistem performansı ve güncelleme süreleri:</p>
+                <ul>
+                    <li><strong>Tracking Heartbeat:</strong> 600ms (kullanıcı tarafı)</li>
+                    <li><strong>Admin Refresh:</strong> 1 saniye (kullanıcılar sayfası)</li>
+                    <li><strong>Dashboard Refresh:</strong> 3 saniye (istatistikler)</li>
+                    <li><strong>Auto Cleanup:</strong> 5 dakika (eski kayıtlar)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="/admin/" class="btn">🔐 Admin Panele Git</a>
+            <a href="/admin/?page=users" class="btn">👥 Kullanıcıları Gör</a>
+            <a href="/admin/?page=online" class="btn">🟢 Canlı Takip</a>
+            <a href="/test_system.php" class="btn">🔍 Sistem Testi</a>
+        </div>
+    </div>
+</body>
+</html>

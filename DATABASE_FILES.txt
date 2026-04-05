@@ -1,0 +1,50 @@
+# VERİTABANI BAĞLANTI BİLGİLERİ OLAN DOSYALAR
+
+Başka sunucuya taşırken bu dosyalardaki veritabanı bilgilerini değiştirmeniz gerekiyor:
+
+## ANA DOSYALAR (ÖNCELİKLİ)
+1. config.php (YENİ - Merkezi config dosyası)
+2. api.php
+3. application-moderate.php
+4. track_online.php
+5. 3dredirect.php
+
+## ADMIN PANEL
+6. admin.php
+7. admin_actions.php
+8. admin/pages/dashboard.php
+9. admin/pages/users.php
+10. admin/pages/online.php
+
+## ACS (3D Secure)
+11. acs/config.php
+
+## DİĞER SAYFALAR
+12. success.php
+13. process_3d.php
+
+## TEST DOSYALARI (Opsiyonel)
+14. test_system.php
+15. test_redirect.php
+16. test_connection.php
+
+---
+
+## DEĞİŞTİRİLECEK BİLGİLER
+
+Her dosyada şu satırları bulup değiştirin:
+
+$host = 'localhost';        // Sunucu adresi
+$dbname = 'hgs_system';     // Veritabanı adı
+$username = 'root';         // Kullanıcı adı
+$password = '';             // Şifre
+
+---
+
+## KOLAY YOL: config.php Kullanımı
+
+1. config.php dosyasını düzenle
+2. Diğer dosyalarda require_once 'config.php'; ekle
+3. $pdo = getDbConnection(); kullan
+
+Bu şekilde tek yerden yönetirsin!

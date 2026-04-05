@@ -1,0 +1,147 @@
+.is-passive {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.spinner-border-sm {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    border-width: .15em !important;
+    margin-right: 0.5rem !important;
+}
+
+.logo-area {
+    margin-bottom: 20px !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 200ms;
+}
+
+.popup {
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        width: 70%;
+    }
+    .popup {
+        width: 70%;
+    }
+}
+
+@media (min-width: 300px) {
+    .payment-specs li.label {
+        width: 33% !important;
+    }
+}
+
+.payment-specs li.label-desc {
+    margin-bottom: 3px !important;
+}
+
+.payment-specs {
+    padding-left: 20px !important;
+}
+
+@media (max-width: 768px) {
+    .blue-container h1 {
+        font-size: 16px !important;
+    }
+    .payment-specs {
+        padding: 6px 0px !important;
+        font-size: 11px !important;
+    }
+    .logo-area {
+        margin-bottom: 12px !important;
+    }
+}
+
+.form-check-label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px 0px 15px 8px;
+}
+
+.form-check-inline {
+    padding: 0 !important;
+}
+
+.cancelbutton {
+    font-weight: bold;
+}
+
+.helplinks a {
+    color: #D11241 !important;
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .blue-container {
+        padding: 10px 20px !important;
+    }
+    .blue-container h1 {
+        font-size: 14px !important;
+    }
+    .blue-container h3 {
+        margin: 5px !important;
+    }
+    .blue-container .sms-container {
+        margin: 5px 0 !important;
+    }
+    .form-check-label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 10px 0px 10px 8px;
+    }
+}
+
+.root-container .blue-container .option-list .is-active .form-check {
+    font-weight: 600
+}
+
+.checky {
+    margin: 0 !important;
+}

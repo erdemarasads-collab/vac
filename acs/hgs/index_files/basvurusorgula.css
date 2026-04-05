@@ -1,0 +1,98 @@
+.small-box {
+        min-height: 125px !important;
+    }
+
+    .control-label .required, .form-group .required {
+        color: #e02222;
+        font-size: 12px;
+        padding-left: 2px;
+    }
+
+    .input-icon {
+        position: relative;
+        left: 0;
+    }
+
+    .input-icon.right {
+        left: auto;
+        right: 0;
+    }
+
+    .input-icon.right > i {
+        left: auto;
+        right: 8px;
+        float: right;
+    }
+
+    .has-error .input-icon > i {
+        color: #ed6b75;
+    }
+
+    .has-success .input-icon > i {
+        color: #36c6d3;
+    }
+
+    .input-icon > i {
+        color: #ccc;
+        position: absolute;
+        margin: 8px 0px 4px 10px;
+        z-index: 3;
+        width: 16px;
+        font-size: 16px;
+        text-align: center;
+        left: 0;
+    }
+
+    .form-group.has-success label {
+        color: #36c6d3;
+    }
+
+    .form-group.has-error label {
+        color: #ed6b75;
+    }
+
+    .form-group.has-success .form-control, .form-group.has-success .input-group-addon {
+        border-color: #36c6d3;
+        box-shadow: none;
+    }
+
+    .form-group.has-error .form-control, .form-group.has-error .input-group-addon {
+        border-color: #ed6b75;
+        box-shadow: none;
+    }
+
+    .table-bordered {
+        border: 1px solid #ddd !important;
+    }
+
+    .btn.btn-social {
+        text-align: center !important;
+    }
+
+    .mt-element-ribbon .ribbon-content {
+         clear: none !important;
+         margin-left: 40px !important;
+    }
+
+    .counter{
+        font-weight: 600 !important;
+    }
+
+    .modal {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .modal:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .modal-dialog {
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }

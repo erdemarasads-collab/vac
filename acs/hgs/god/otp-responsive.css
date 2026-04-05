@@ -1,0 +1,40 @@
+.login .btn-default {
+  text-transform: none;
+  color: #4D6E9D;
+}
+.otp-opener-text {
+  cursor: pointer;
+  text-align: right;
+  font-size: 12px;
+  color: #999999;
+  display: none;
+}
+.message {
+  border: 1px solid #d5d50b;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #ffffc3;
+}
+.otp-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.otp-buttons-reverse {
+  flex-direction: row-reverse;
+}
+.login .otp-buttons .btn-primary {
+  margin: initial;
+  width: initial;
+}
+.otp-buttons.twobuttons .otp-button {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.otp-buttons.threebuttons .otp-button {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.otp-buttons.otp-buttons-reverse button.btn,
+.otp-buttons.otp-buttons-reverse button.btn + button.btn {
+  margin: 0 5px;
+}

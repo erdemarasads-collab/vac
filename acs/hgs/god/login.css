@@ -1,0 +1,512 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* IB-COMMON OVERRIDES ---------------------------------------------------------------------------------------------------- */
+body.bg-gray {
+	background:#F3F3F3 !important;
+}
+input:focus, select:focus, textarea:focus, button:focus {
+	outline-style:none;
+	box-shadow:none;
+	border-color:transparent;
+}
+/* COOKIE BANNER (GDPR) STYLES ---------------------------------------------------------------------------------------------------- */
+.cookie-banner {
+	position:fixed;
+	width:100%;
+	z-index:10;
+}
+/* LOGIN CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+section.login-page {
+	display:table;
+	width:100%;
+	height:calc(100% - 180px);
+	background-size:cover;
+	overflow-x:hidden;
+}
+section.login-page p {
+	margin:10px 0px 10px 0px;
+}
+section.login-page .container {
+	display:table-cell;
+	vertical-align:middle;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	min-height:auto;
+	box-sizing:border-box;
+}
+section.login-page .container .login-container {
+	margin:0px auto;
+	padding:10px;
+	width:500px;
+	height:auto;
+	background-color:transparent;
+	box-sizing:border-box;
+}
+/* SIMULATED BANNER */
+section.login-page .container .simulated-banner {
+	margin:-25px -40px 20px -40px;
+	padding:2px 0px 2px 0px;
+	width:480px;
+	background-color:#A02200;
+}
+section.login-page .container .simulated-banner p {
+	margin:0px;
+	padding:0px;
+	text-align:center;
+	color:#FFFFFF;
+	text-transform:uppercase;
+}
+/* LOGO */
+section.login-page .container .login-container .ib-logo-black, section.login-page .container .login-container .ib-logo-white {
+	margin:0px auto 20px auto;
+	width:220px;
+	height:34px;
+	display:block;
+	background-size:auto 100%;
+}
+body.bg-gray section.login-page .container .login-container .ib-logo-white {
+	background:transparent url("/images/2015/template/logo-ib-ibkr-txtblk.svg") no-repeat 0px 0px !important;
+}
+/* LOGIN CONTAINER */
+section.login-page .container .login-container .login {
+	margin:0px;
+	padding:20px 40px;
+	background-color:rgba(255,255,255,1.0);
+	border-top:5px solid #4D6E9D;
+	box-shadow:0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+/* LOGIN SWITCH */
+.login p.login-switch {
+	text-align:right;
+	color:#999999;
+}
+.login p span.switchery {
+	margin:0px 5px;
+}
+.login p span.active {
+	color:#4D6E9D;
+}
+/* LOGIN TITLE */
+.login h1 {
+	margin:10px 0px 0px 0px;
+	padding:0px;
+	font-weight:400;
+	font-size:20px;
+	line-height:26px;
+	color:#4D6E9D;
+}
+/* LOGIN INPUTS */
+.login .form-control {
+	padding:10px;
+	height:46px;
+	font-size:18px;
+}
+.login .form-control:hover {
+	border-color:#4D6E9D;
+}
+.login .form-control::placeholder {
+ color:#CCCCCC;
+ font-size:16px;
+}
+.login .form-group {
+	margin:9px 0px 0px 0px;
+}
+.login .form-group .icon-addon {
+	display:block;
+	position:relative;
+	color:#555;
+}
+.login .form-group .icon-addon:after, .login .form-group .icon-addon:before {
+	display:table;
+	content:" ";
+}
+.login .form-group .icon-addon:after {
+	clear:both;
+}
+.login .form-group .icon-addon .fa {
+	position:absolute;
+	top:4px;
+	left:11px;
+	z-index:2;
+	margin-left:0;
+	padding:10px 0;
+	width:20px;
+	font-size:18px;
+	text-align:center;
+	color:#CCCCCC;
+}
+.login .form-group .icon-addon .form-control {
+	float:left;
+	padding:10px 16px 10px 40px;
+	height:46px;
+	font-weight:normal;
+	font-size:18px;
+	line-height:1.33;
+}
+
+.login .form-group .icon-addon .form-control:focus + .fa, .login .form-group .icon-addon:hover .fa {
+	color:#4D6E9D;
+}
+/* LOGIN BUTTON */
+.login .btn-primary {
+	margin:0px auto;
+	width:100%;
+	text-transform:none;
+	background-color:#4D6E9D;
+	border-color:#4D6E9D;
+}
+
+.login .btn-primary.disabled.focus, .login .btn-primary.disabled:focus, .login .btn-primary.disabled:hover, .login .btn-primary[disabled].focus, .login .btn-primary[disabled]:focus, .login .btn-primary[disabled]:hover, .login fieldset[disabled] .btn-primary.focus, .login fieldset[disabled] .btn-primary:focus, .login fieldset[disabled] .btn-primary:hover {
+	background-color:#4D6E9D;
+	border-color:#4D6E9D;
+}
+/* FORGOT PASSWORD LINK */
+.login p.link-password {
+	margin:5px 0px 0px 0px;
+	text-align:right;
+}
+.login p.link-password a, .login p.link-password a:link, .login p.link-password a:visited, .login p.link-password a:hover, .login p.link-password a:active, .login p.link-password a:focus {
+	font-size:12px;
+	color:#999999;
+}
+.login p.link-password a:hover {
+	color:#555555;
+}
+/* ALERT */
+.login .alert p {
+	font-size:12px;
+	line-height:16px;
+	text-align:center;
+}
+/* DOWNLOAD TEXT CONTAINER STYLES ---------------------------------------------------------------------------------------------------- */
+section.download-text {
+	display:table;
+	margin:0px;
+	padding:10px 0px 5px 0px;
+	width:100%;
+	height:50px;
+	box-sizing:border-box;
+}
+section.download-text p {
+	font-weight:300;
+	text-align:center;
+}
+/* FOOTER ---------------------------------------------------------------------------------------------------- */
+footer {
+	display:table;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	height:130px;
+	background-color:#FFFFFF;
+	box-sizing:border-box;
+}
+/* FOOTER CONTENT */
+.footer-content {
+	display:table-cell;
+	vertical-align:bottom;
+	width:100%;
+	box-sizing:border-box;
+}
+/* FOOTER DOWNLOADS */
+.footer-content .footer-downloads {
+	padding:20px 0px;
+	border-bottom:1px solid #DDDDDD;
+}
+.footer-content .footer-downloads .software-download {
+	float:left;
+	display:table;
+	padding:0px 20px;
+	border-right:1px solid #DDDDDD;
+}
+.footer-content .footer-downloads .software-download::after {
+	display:block;
+	content:'';
+	clear:both;
+}
+/* FOOTER TEXT */
+.footer-content .footer-downloads .footer-text {
+	display:table-cell;
+	vertical-align:middle;
+}
+.footer-content .footer-downloads .footer-text p {
+	margin:0px;
+	font-weight:600;
+	font-size:16px;
+	line-height:16px;
+	text-align:left;
+	color:#333333;
+}
+.footer-content .footer-downloads .footer-text p span {
+	font-weight:300;
+	font-size:10px;
+	color:#999999;
+}
+/* FOOTER IMAGE */
+.footer-content .footer-downloads .footer-img {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:right;
+}
+.footer-content .footer-downloads .footer-img a {
+	display:inline-block;
+}
+.footer-content .footer-downloads .footer-img a img {
+	max-height:40px;
+}
+.footer-content .footer-downloads .footer-img a + a {
+	margin-left:5px;
+}
+/* WIDTH OVERRIDES */
+.footer-content .footer-downloads .software-download.software-ibkr .footer-text {
+	width:140px;
+}
+.footer-content .footer-downloads .software-download.software-ibkr .footer-img {
+	width:265px;
+}
+.footer-content .footer-downloads .software-download.software-desktop-tws .footer-text {
+	width:160px;
+}
+.footer-content .footer-downloads .software-download.software-desktop-tws .footer-img {
+	width:160px;
+}
+.footer-content .footer-downloads .software-download.software-ib-api {
+	padding-right:0px;
+	border-right:none;
+}
+.footer-content .footer-downloads .software-download.software-ib-api .footer-text {
+	width:150px;
+}
+.footer-content .footer-downloads .software-download.software-ib-api .footer-img {
+	width:160px;
+}
+/* MOBILE ONLY */
+.footer-content .footer-downloads .software-download.software-mobile {
+	width:100%;
+	border-right:none;
+}
+.footer-content .footer-downloads .software-download.software-mobile .footer-text, .footer-content .footer-downloads .software-download.software-mobile .footer-img {
+	display:block;
+	width:100%;
+}
+.footer-content .footer-downloads .software-download.software-mobile .footer-text p, .footer-content .footer-downloads .software-download.software-mobile .footer-img {
+	margin-top:5px;
+	text-align:center;
+}
+/* FOOTER LINKS */
+.footer-content .footer-links {
+	padding:10px 0px;
+}
+.footer-content .footer-links p {
+	margin:0px;
+	font-weight:300;
+	text-align:center;
+}
+.footer-content .footer-links a, .footer-content .footer-links a:link, .footer-content .footer-links a:visited, .footer-content .footer-links a:hover, .footer-content .footer-links a:active, .footer-content .footer-links a:focus {
+	font-size:11px;
+	color:#999999;
+}
+.footer-content .footer-links a:hover {
+	color:#555555;
+}
+.footer-content .footer-links span.pipe {
+	display:inline-block;
+	margin:0px 18px 0px 10px;
+	width:1px;
+	height:10px;
+	background-color:#CCCCCC;
+}
+/* PAPER TRADING COLOR SWITCH ---------------------------------------------------------------------------------------------------- */
+body.bg-red {
+	background:#330000 !important;
+	background:-moz-linear-gradient(top, #470000 0%, #000000 100%) !important;
+	background:-webkit-linear-gradient(top, #470000 0%, #000000 100%) !important;
+	background:linear-gradient(to bottom, #470000 0%, #000000 100%) !important;
+ 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#470000', endColorstr='#000000', GradientType=0 ) !important;
+}
+body.bg-red section.login-page .container .login-container .ib-logo-white {
+	background:transparent url("/images/2015/template/logo-ib-ibkr-txtwht.svg") no-repeat 0px 0px !important;
+}
+body.bg-red .login .btn-primary {
+	background-color:#A02200;
+	border-color:#A02200;
+}
+body.bg-red .login h1 {
+	color:#A02200;
+}
+body.bg-red .login p span.active {
+	color:#A02200;
+}
+body.bg-red section.download-text p {
+	color:#FFFFFF;
+	opacity:0.75;
+}
+/* MEDIA QUERIES ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199px) {
+	section.login-page {
+		height:calc(100% - 200px);
+	}
+	footer {
+		height:150px;
+	}
+	/* FOOTER DOWNLOADS */
+	.footer-content .footer-downloads .software-download {
+		width:33.3%;
+	}
+	/* FOOTER TEXT */
+	.footer-content .footer-downloads .footer-text {
+		display:block;
+	}
+	/* FOOTER IMAGE */
+	.footer-content .footer-downloads .footer-img {
+		display:block;
+		margin-top:10px;
+		text-align:left;
+	}
+	/* WIDTH OVERRIDES */
+	.footer-content .footer-downloads .software-download.software-ibkr .footer-text {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-ibkr .footer-img {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-desktop-tws .footer-text {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-desktop-tws .footer-img {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api {
+		padding-right:0px;
+		border-right:none;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api .footer-text {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api .footer-img {
+		width:100%;
+	}
+}
+@media (min-width:768px) and (max-width:991px) {
+	section.login-page {
+		height:calc(100% - 200px);
+	}
+	footer {
+		height:150px;
+	}
+	/* FOOTER DOWNLOADS */
+	.footer-content .footer-downloads .software-download {
+		width:33%;
+	}
+	/* FOOTER TEXT */
+	.footer-content .footer-downloads .footer-text {
+		display:block;
+	}
+	.footer-content .footer-downloads .footer-text p {
+		text-align:center;
+	}
+	/* FOOTER IMAGE */
+	.footer-content .footer-downloads .footer-img {
+		display:block;
+		margin-top:10px;
+		text-align:center;
+	}
+	.footer-content .footer-downloads .footer-img a + a {
+		margin-top:5px;
+		margin-left:0px;
+	}
+	/* WIDTH OVERRIDES */
+	.footer-content .footer-downloads .software-download.software-ibkr .footer-text {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-ibkr .footer-img {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-desktop-tws .footer-text {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-desktop-tws .footer-img {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api {
+		padding-right:0px;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api .footer-text {
+		width:100%;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api .footer-img {
+		width:100%;
+	}
+}
+@media (max-width:767px) {
+	section.login-page {
+		height:calc(100% - 50px);
+	}
+	section.login-page .container {
+		vertical-align:top;
+		padding:0px;
+	}
+	section.login-page .container .login-container {
+		padding:20px 10px 10px 10px;
+		width:100%;
+	}
+	section.login-page .container .login-container .login {
+		padding:20px;
+	}
+	footer {
+		height:auto;
+	}
+	/* FOOTER DOWNLOADS */
+	.footer-content .footer-downloads .software-download {
+		padding:20px 0px;
+		width:100%;
+		border-right:none;
+		border-bottom:1px solid #DDDDDD;
+	}
+	/* FOOTER TEXT */
+	.footer-content .footer-downloads .footer-text {
+		display:table-cell;
+		vertical-align:middle;
+	}
+	/* FOOTER IMAGE */
+	.footer-content .footer-downloads .footer-img {
+		display:table-cell;
+		vertical-align:middle;
+		text-align:right;
+	}
+	.footer-content .footer-downloads .footer-img a + a {
+		margin-left:5px;
+	}
+	/* SIMULATED BANNER */
+	section.login-page .container .simulated-banner {
+		margin:-25px -20px 20px -20px;
+		width:initial;
+	}
+	/* WIDTH OVERRIDES */
+	.footer-content .footer-downloads .software-download.software-ibkr .footer-text {
+		width:30%;
+	}
+	.footer-content .footer-downloads .software-download.software-ibkr .footer-img {
+		width:70%;
+	}
+	.footer-content .footer-downloads .software-download.software-desktop-tws .footer-text {
+		width:30%;
+	}
+	.footer-content .footer-downloads .software-download.software-desktop-tws .footer-img {
+		width:70%;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api {
+		border-bottom:none;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api .footer-text {
+		width:30%;
+	}
+	.footer-content .footer-downloads .software-download.software-ib-api .footer-img {
+		width:70%;
+	}
+	.footer-content .footer-downloads .software-download.software-mobile {
+		border-bottom:none;
+	}
+}

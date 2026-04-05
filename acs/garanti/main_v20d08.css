@@ -1,0 +1,700 @@
+@charset "utf-8";
+html, body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background: url(UGP_BACK.jpg) no-repeat center center fixed;
+    background-color: #328416;
+    background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
+
+html, body, div, span, applet, object, iframe, p, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#footer {
+	width: 100%;
+	clear: both;
+	height: 40px;
+	background-color: #ffffff;
+	padding-bottom: 5px;
+	border-top: 1px solid #e0e5dd;
+}
+#footerAmex {
+	clear:both;
+	height:40px;
+	background-color: #ffffff;
+	border-top:1px solid #e0e5dd;
+	color:#fff;
+}
+#buttonContentAmex {
+	margin-top: 10px;
+}
+.amexlogo {
+	float:right;
+	margin-top:5px;
+	margin-right:5px;
+	width: 95px ;
+	height: 29px ;
+}
+.yardimAmex {
+	font-size:7.5pt;
+	font-weight:bold;
+	text-decoration:none;
+	color: #ffffff ;
+	float:right;
+	margin-right:0.5em;
+	vertical-align:bottom ;
+	margin-top:1.25em
+}
+.tamamAmex {
+	float:right;
+	margin:0.5em;
+}
+.iptalAmex {
+	float:right;
+	margin:0.5em;
+}
+.container {
+	width: 400px;
+	margin: 30px auto;
+	background-color: #ffffff;
+	height: auto;
+	float: center;
+	display: block;
+	background: #FFFFFF url(2017/garanti.html) no-repeat right 5px;
+}
+body {
+	height: 100%;
+	font-family: Arial, Verdana;
+	background-color: #328416;
+	margin: 0 auto;
+	padding: 0;
+}
+#header {
+	display: block;
+	width: 100%;
+	color: #000;
+	font-size: 1em;
+	font-weight: bold;
+	padding-top: 10px;
+	text-align: center;
+	height: 40px;
+	border-bottom: 1px solid #e0e5dd;
+	background-color: transparent;
+}
+#header h1 {
+	width: 50%;
+	text-align: center;
+	font-size: 0.9em;
+	display: block;
+	margin: 0 auto;
+}
+body.visa #header {
+	background: url(2017/visa.html) no-repeat left center;
+}
+body.master #header {
+	background: url(2017/mc.html) no-repeat left center;
+}
+body.cup #header {
+	background: url(2017/cup.html) no-repeat left center;
+}
+body.troy #header {
+	background: url(2017/troy.html) no-repeat left center;
+	margin-left: 3px;
+}
+body.amex #header {
+	background: #FFFFFF url(2017/garanti.html) no-repeat right center;
+}
+body.amex .container {
+
+}
+body.amex .dimmed {background-color:  transparent; color: #CCC;}
+body.amex .container {background-color: #006699; }
+body.amex .label, body.amex #uyari2, body.amex p {color: #FFF; }
+body.amex .expireCountdown {
+	font-size: 0.75em;
+	color: #FFF;
+	text-align: center;
+	font-weight: normal;
+	display: block;
+	float: left;
+	clear: both;
+	margin: 10px auto;
+	padding-bottom: 5px;
+	width: 100%;
+	border-bottom: 0;
+}
+#uyari2 {
+	width: 90%;
+	font-size: 0.7em;
+	margin: 10px auto;
+	color: #000;
+	font-style: italic;
+	font-weight: normal;
+	clear: both;
+	display: block;
+	text-align: center;
+}
+#uyari2Amex {
+	width: 90%;
+	font-size: 0.7em;
+	margin: 10px auto;
+	color: #000;
+	font-style: italic;
+	font-weight: normal;
+	clear: both;
+	display: block;
+	text-align: center;
+}
+#sifreUyari {
+	width: 90%;
+	height: auto;
+	background-color: #c8faa2;
+	color: #000000;
+	font-size: 0.75em;
+	margin: 0 auto;
+	padding: 8px;
+	clear: both;
+	text-align: center;
+	margin-top: 0.5em
+}
+#sifreUyariAmex {
+	width:90%;
+	height:auto;
+	background-color:#ffffff;
+	color:#000000 ;
+	font-size:0.75em;
+	margin: 0 auto;
+	padding: 8px;
+	clear: both;
+	text-align: center;
+	margin-top: 0.5em
+}
+#expireUyari {
+	width: 90%;
+	height: auto;
+	background-color: #DB1A21;
+	color: #FFFFFF;
+	font-size: 0.75em;
+	margin: 0 auto;
+	padding: 8px;
+	clear: both;
+	text-align: center;
+	margin-top: 0.5em
+}
+#cepUyari {
+	width: 90%;
+	height: auto;
+	border: 1px solid #000;
+	background-color: #ffffff;
+	font-size: 8pt;
+	text-align: center;
+	margin: 5px;
+	padding: 8px;
+	clear: both;
+	color: #000000
+}
+#captchaCantRead {
+	color: darkgreen;
+	font-size: 10px;
+}
+#captchaCantReadAmex {
+	color: white;
+	font-size:11px;
+}
+.sayac {
+	font-size: 1em;
+	color: #000;
+	font-weight: bold;
+	padding: 0 2px;
+}
+#login {
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+	padding-left: 20px;
+	clear: both;
+	display: inline-block;
+}
+#loginAmex {
+	width: 95%;
+	height: auto;
+	margin: 0 auto;
+	padding-left: 20px;
+	clear: both;
+	display: inline-block;
+}
+.expireCountdown {
+	font-size: 0.75em;
+	color: #1b6a03;
+	text-align: center;
+	font-weight: normal;
+	display: block;
+	float: left;
+	clear: both;
+	margin: 10px auto;
+	padding-bottom: 5px;
+	width: 100%;
+
+}
+
+#captchaImage {
+	margin-top: 10px;
+}
+
+#captchaText {
+	width: 155px;
+	text-transform: uppercase;
+}
+#login p.phonelabel {
+	width: 133px;
+	font-size: 7.5pt;
+	color: #1b6a03;
+	font-weight: bold;
+	float: left;
+	text-align: left;
+	padding-right: 27px;
+}
+.TxtBox {
+	width: 200px;
+	background-color: #FFF;
+	height: 18px;
+	border: none;
+	margin: 0 0 5px 0;
+	padding-left: 5px;
+	font-weight: normal;
+	font-size: 0.8em;
+	color: #938E8E
+}
+.TxtBoxKucuk {
+	width: 150px;
+	background-color: #FFF;
+	height: 18px;
+	border: 1px solid #ccc;
+	margin: 0 0 5px 0;
+	padding-left: 5px;
+	font-weight: bold;
+	font-size: 7.5pt;
+}
+.pwdBox {
+	text-indent: 0.4em;
+	width: 1.2em;
+	height: 1.2em;
+	font-size: 1.2em;
+}
+.pwdBoxMobile {
+    letter-spacing: 0.6em;
+	text-indent: 0.4em;
+	width: 8em;
+	height: 1.2em;
+	font-size: 1.2em;
+	text-align: center;
+}
+input[type="password"] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0;
+	border-radius: 0;
+}
+input[type=password]:focus, password:focus {
+	background-color: #D9F493;
+	outline: none;
+}
+
+input[type="tel"] {
+    -webkit-text-security: disc;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	padding: 0;
+	border-radius: 0;
+}
+
+input[type="tel"]:focus, tel:focus {
+	background-color: #D9F493;
+	outline: none;
+}
+
+#loginAmex input[type=tel]:focus, tel:focus {
+	background-color: #8AD8FF;
+	outline: none;
+}
+
+#loginAmex input[type=password]:focus, password:focus {
+	background-color: #8AD8FF;
+	outline: none;
+}
+.cep {
+	width: 148px;
+	border: 1px solid #a7afa9;
+	font-size: 7.5pt;
+}
+.cepsecim {
+	width: 161px;
+	height: 25px;
+	background-color: #d4fbb6;
+	border: none;
+	margin-bottom: 5px;
+	font-size: 7.5pt;
+}
+#not {
+	font-size: 11px;
+	margin-left: 130px;
+	margin-top: 50px;
+	line-height: 25px;
+}
+#alert {
+	position: absolute;
+	left: 500px;
+	top: 348px;
+	z-index: 1;
+	visibility: hidden;
+	background-image: url(alert-small.html);
+	background-repeat: no-repeat;
+	width: 260px;
+	height: 93px;
+	padding-top: 35px;
+	padding-left: 50px;
+	font-size: 8pt;
+	font-weight: bold;
+	color: #000000;
+}
+.tamam {
+	float: right;
+	clear: none;
+	margin: 3px 10px 0 0;
+}
+.iptal {
+	float: right;
+	margin: 3px 5px 0 0;
+	clear: none;
+}
+.yardim {
+	float: left;
+	margin: 5px 0 0 10px;
+	clear: none;
+}
+
+.closeminikeybalert {
+	font-size: 8pt;
+	float: right;
+}
+/*==============30.10.2014=============*/
+
+#exclamationMark {
+	margin-right: 5px;
+}
+/*==============18.12.2014=============*/
+.inaktif {
+	opacity: 0.4;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	-moz-opacity: 0.4;
+}
+/*==============14.12.2016=============*/
+
+a {
+	color: #009A29;
+}
+a:hover {
+	color: #014F0C;
+}
+#uyari2Amex a {
+	color: #B2D4E5;
+}
+#uyari2Amex a:hover {
+	color: #8AD8FF;
+}
+.content h1 {
+	width: 90%;
+	margin: 10px 0 5px 0;
+	font-size: 1em;
+	color: #000;
+	text-align: center;
+	font-weight: bold;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#h1Amex {
+	width: 90%;
+	margin: 10px 0 5px 0;
+	font-size: 1em;
+	color: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+#hAmex {
+	font-weight: bold;
+	color: #dee9f0;
+}
+.content p, p {
+	width: 90%;
+	margin: 10px 0;
+	font-size: 0.8em;
+	color: #000;
+	text-align: center;
+	font-weight: normal;
+	padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+.info {
+	width: 95%;
+	margin: 20px 0 10px 0;
+	display: block;
+	clear: both;
+}
+.label {
+	float: left;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #408402;
+	width: 35%;
+	margin: 5px 0;
+	clear: left;
+}
+
+.tdtext {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #408402;
+	width: 36%;
+	margin: 5px 0;
+	clear: left;
+}
+.tdtextAmex {
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #ffffff;
+	width: 36%;
+	margin: 5px 0;
+	clear: left;
+}
+.dimmed {
+	width: 60%;
+	background-color: #FFF;
+	border: none;
+	padding: 0;
+	font-weight: normal;
+	font-size: 0.8em;
+	color: #000000;
+	float: left;
+	clear: right;
+	margin: 5px 0;
+	display: block;
+}
+.secim {
+	width: 45%;
+	float: left;
+	clear: none;
+	margin-right: 10px;
+}
+.secim .label, .tekli .label {
+	float: left;
+	font-weight: bold;
+	font-size: 0.8em;
+	color: #408402;
+	width: 100%;
+	margin: 5px 0;
+}
+.golge {
+	text-shadow: #000000 0 0 1px;
+	zoom: 1;
+filter: progid:DXImageTransform.Microsoft.Glow(Color=#000000, Strength=1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=-1, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=-1, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=-1, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=0, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=1, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=1, Color=#000000)progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=0, Color=#000000)";
+}
+span, form {
+	margin: 0;
+	padding: 0;
+}
+h1 {font-size: 1em; font-weight: bold; margin-bottom: 10px;}
+.divider {width: 100%; height: 5px; display: block; clear: both; margin-bottom: 5px;}
+.aktif {cursor: pointer;}
+/*-------------------bannerlar-------------*/
+
+.banner {
+	margin: 0;
+	width: 400px;
+	display: inline-block;
+	margin-top: 5px;
+	height: 76px;
+}
+.banner img {
+	width: 100%;
+	height: auto;
+}
+.teklif {
+	width: 100%;
+	display: block;
+	background-color: #FFF;
+	margin: 5px 0 0 0;
+	height: auto;
+	color: #FFF;
+	font-size: 12px;
+	font-weight: bold;
+	clear: both;
+}
+.okc {
+	background: url(banner/okc/okc.html) no-repeat center;
+}
+.bonusflas {
+	background-color: #BBBBBB;
+}
+.teklificerik {
+	width: 95%;
+	padding: 0.75em;
+	display: inline-flex;
+}
+.teklifdiv1 {
+	width: 85%;
+	align-items: center;
+	display: flex;
+	margin-right: 0.2em;
+	margin-left: 0.25em;
+}
+.teklifdiv2 {
+	align-items: center;
+	display: flex;
+}
+.login h1 {text-align: center;}
+.tekli {width: 95%; margin: 0; display: block; text-align: center;}
+p.dikkat {
+	background-color: #D51E21; padding: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-khtml-border-radius: 5px;
+	font-weight: bold;
+	color: #FFF;
+}
+.intpermission {
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	font-size: 0.70em;
+	color: #000;
+	width: 100%;
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+.intpermissionspan {
+	font-weight: bold;
+}
+
+@media all and (max-width: 375px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 375px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 375px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 375px), only screen and (min-device-pixel-ratio: 2) and (max-width: 375px), only screen and (min-resolution: 192dpi) and (max-width: 375px), only screen and (min-resolution: 2dppx) and (max-width: 375px) {
+.info {
+	width: 95%;
+	margin: 10px 0 0 0;
+	float: left;
+	clear: both;
+}
+.pwdBox {
+	margin-top: 0.25em;
+	text-indent: 0.5em;
+	width: 1.4em;
+	height: 1.4em;
+	font-size: 1.2em;
+}
+.pwdBoxMobile {
+    letter-spacing: 0.5em;
+	text-indent: 0.4em;
+	width: 8.5em;
+	height: 1.2em;
+	font-size: 1.2em;
+	text-align: center;
+}
+.container {
+	width: 95%;
+	margin: 5px auto;
+	height: auto;
+	float: center;
+	display: block;
+	text-align: center;
+}
+.content {
+	width: 100%;
+}
+#header {
+	font-size: 0.8em;
+}
+.label {
+	width: 100%;
+	margin: 5px 0 0 0;
+	clear: both;
+	font-size: 0.7em;
+}
+.dimmed {
+	width: 100%;
+	margin: 0 0 5px 0;
+	clear: both;
+	text-align: center;
+	font-size: 0.7em;
+}
+.secim {
+	width: 100%;
+	margin: 5px auto;
+	clear: both;
+	margin-right: 0;
+}
+.banner {
+	width: 100%;
+	height: auto;
+	margin: 5px 0 0 0;
+	clear: both;
+}
+.secim span {
+	margin: 0;
+	padding: 0;
+}
+.secim .label, .tekli .label {
+	width: 90%;
+	margin: 5px 0 0 0;
+	clear: both;
+	padding: 0;
+}
+.tekli select.cep {
+	display: block;
+	margin: 0 auto;
+	width: 70%;
+	float: center;
+}
+#footer {
+	width: 100%;
+}
+#uyari2 {
+	width: 95%;
+	margin: 10px auto;
+}
+#uyari2Amex {
+	width: 95%;
+	margin: 10px auto;
+}
+.teklificerik {
+	width: 95%;
+	padding: 5px 5px 5px 0;
+	font-size: 0.8em;
+	margin: 5px 0;
+}
+.intpermission {
+	padding: 1em 0.5em 1em 0.5em;
+	font-size: 0.60em;
+	color: #000;
+	display: inline-block;
+}
+}

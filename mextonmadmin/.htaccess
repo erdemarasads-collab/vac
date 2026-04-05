@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /admin/
+
+# Redirect to index.php if file doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+# Security
+<Files "*.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
