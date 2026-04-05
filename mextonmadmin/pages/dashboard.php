@@ -16,6 +16,7 @@ $error = null;
 
 try {
     $pdo = getDbConnection();
+    $pdo->setAttribute(PDO::ATTR_TIMEOUT, 5);
     
     // Online users tablosunu oluştur veya güncelle
     $pdo->exec("
