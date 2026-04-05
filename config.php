@@ -28,9 +28,16 @@ function getDbConnection() {
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
     } catch(PDOException $e) {
-        // Güvenlik için detaylı hata mesajı gösterme
         error_log("Database connection error: " . $e->getMessage());
-        die(json_encode(['success' => false, 'message' => 'Veritabanı bağlantı hatası']));
+        die(json_encode([
+            'success' => false,
+            'message' => 'Veritabanı bağlantı hatası',
+            'debug' => $e->getMessage(),
+            'host' => DB_HOST,
+            'port' => DB_PORT,
+            'db' => DB_NAME,
+            'user' => DB_USER
+        ]));
     }
 }
 
