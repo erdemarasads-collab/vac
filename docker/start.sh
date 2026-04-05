@@ -4,6 +4,9 @@ LISTEN_PORT=${PORT:-80}
 
 echo "==> Starting on port: $LISTEN_PORT"
 
+# php-fpm'in env variable'ları görmesi için
+echo "clear_env = no" >> /usr/local/etc/php-fpm.d/www.conf
+
 cat > /etc/nginx/nginx.conf << NGINXCONF
 worker_processes 1;
 events {
